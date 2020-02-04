@@ -1,0 +1,20 @@
+.table-name{
+  text-transform: capitalize;
+}
+
+.table-container {
+  overflow: scroll;
+  border: 1px solid var(--color-lightGrey);
+  max-height: calc(100vh - 185px);
+}
+
+.table-container thead{
+  background: var(--color-primary);
+  color: white;
+}
+.table-container td{
+  padding: 1.2rem 1.6rem;
+  min-width: 180px;
+  vertical-align: top;
+}
+

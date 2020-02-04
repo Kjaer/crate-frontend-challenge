@@ -1,0 +1,41 @@
+{
+  "name": "crate-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "docker:crate": "docker run -p 4200:4200 -d crate",
+    "docker:import": "node scripts/import.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "chota": "^0.7.1",
+    "fetch-suspense": "^1.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.1"
+  },
+  "devDependencies": {
+    "node-crate": "^2.0.6"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
