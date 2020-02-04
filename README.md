@@ -52,6 +52,10 @@ Run
 ```shell script
 yarn start
 ``` 
+Before you head your browser, I couldn't manage the overcome CORS issue and do the quick win installing a browser plugin
+(Allow CORS)[https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf] 
+for enabling CORS against the crate's docker container.
+
 Then open your browser and type `localhost:3000`
 
 ## Friendly warning
