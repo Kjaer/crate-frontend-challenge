@@ -28,10 +28,9 @@ function List({data, tableName}) {
                   {
                     rowData.map((row, idx2) => {
                       if(Array.isArray(row)) {
-                        const list = row.join('\n');
                         return (
                           <td key={idx2}>
-                            <a href={list} target="_blank" rel="noopener noreferrer">{list}</a>
+                            {row.map(link => <a href={link} className="data-link" target="_blank" rel="noopener noreferrer">{link}</a>)}
                           </td>
                         )
                       }
