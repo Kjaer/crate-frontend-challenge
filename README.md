@@ -52,14 +52,12 @@ Run
 ```shell script
 yarn start
 ``` 
-Before you head your browser, I couldn't manage the overcome CORS issue and do the quick win installing a browser plugin
-(Allow CORS)[https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf] 
-for enabling CORS against the crate's docker container.
+**Before you head your browser, I couldn't manage the overcome CORS issue and do the quick win installing a browser plugin [Allow CORS](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) for enabling CORS against the crate's docker container.**
 
 Then open your browser and type `localhost:3000`
 
 ## Friendly warning
-This project also uses pretty smart (`useFetch`)[https://github.com/CharlesStover/fetch-suspense] library.
+This project also uses pretty smart [useFetch](https://github.com/CharlesStover/fetch-suspense) library.
 when you first click the tables in the list you will catch a flicker. that's actually showing `<Loading />`
 until the data load.
 
