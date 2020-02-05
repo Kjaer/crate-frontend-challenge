@@ -5,7 +5,7 @@ import withQuery  from '../../components/withQuery/withQuery';
 
 function Tables({data}) {
   return(
-    <section>
+    <section data-test="crate-tables">
       <h1> Tables</h1>
 
       <h4> Full list </h4>
@@ -13,7 +13,7 @@ function Tables({data}) {
       <ul>
         {
           data.rows.map((row, idx) => (
-              <li key={idx}>
+              <li key={idx} data-test="crate-full-table-list">
                 <Link
                   to={`/full/${row}`}
                   data-test="table-name-link"
@@ -32,7 +32,7 @@ function Tables({data}) {
       <ul>
         {
           data.rows.map((row, idx) => (
-              <li key={idx}>
+              <li key={idx} data-test="crate-paginated-table-list">
                 <Link
                   to={`/paginated/${row}`}
                   data-test="table-name-link"

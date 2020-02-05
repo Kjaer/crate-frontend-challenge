@@ -6,11 +6,14 @@ import 'chota/src/_nav.css';
 function Header() {
   return(
     <Fragment>
-      <nav className="nav">
+      <nav
+        className="nav"
+        data-test="crate-header"
+      >
         <Link
           to="/"
           className="brand"
-          data-test="navigation-brand-link"
+          data-test="crate-logo-link"
         >
           <strong> CRATE </strong>
         </Link>
