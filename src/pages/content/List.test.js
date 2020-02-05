@@ -35,7 +35,7 @@ describe('List', function () {
     jest.unmock('fetch-suspense');
   });
 
-  it('Show all the table data', function() {
+  it('Show all the table data', () => {
     const {queryAllByTestId, getByTestId} = render(<List query={statements.queryTableContent}/>);
 
     expect(getByTestId('crate-db-table')).toBeInTheDocument();

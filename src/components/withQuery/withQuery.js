@@ -18,9 +18,12 @@ function executeQuery(Component) {
   return function (props) {
     const response = useFetch(API, {
       method: 'POST',
-      body: JSON.stringify({stmt: props.query})
+      body: JSON.stringify({stmt: props.query}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
-    
+
     return(
       <Component data={response} {...props} />
     )

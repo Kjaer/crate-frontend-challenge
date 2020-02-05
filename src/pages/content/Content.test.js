@@ -65,7 +65,7 @@ describe('Content', function () {
     jest.unmock('fetch-suspense');
   });
 
-  it('lists tables data with pagination', function() {
+  it('lists tables data with pagination', () => {
     const {queryAllByTestId, getByTestId} = render(
       <MemoryRouter initialEntries={['/paginated/dummy']}>
         <Route path="/paginated/:tableName">

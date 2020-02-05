@@ -35,7 +35,7 @@ describe('App', function () {
     jest.unmock('fetch-suspense');
   });
 
-  it('Lists all the tables fetched from database', function() {
+  it('Lists all the tables fetched from database', () => {
 
     const { queryAllByTestId, getByTestId }  = render(<App />, { wrapper: MemoryRouter });
 
