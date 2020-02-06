@@ -48,11 +48,23 @@ data for starships is persisted
 
 You're almost there. Let's see this data we just imported:
 
+in order to avoid CORS issue of the crate's docker cluster, I use a proxy node server
+allow me to request data without hassle, to do so,
+
 Run
+```shell script
+yarn start-proxy
+``` 
+
+script and you will see this output:
+```shell script
+Start proxy on port 4201 for http://localhost:4200
+```
+then you can start the app with running
 ```shell script
 yarn start
 ``` 
-**Before you head your browser, I couldn't manage CORS issue and went for a quick win with installing a browser plugin [Allow CORS](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) for enabling CORS against the crate's docker container.**
+**~~Before you head your browser, I couldn't manage CORS issue and went for a quick win with installing a browser plugin [Allow CORS](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) for enabling CORS against the crate's docker container.~~**
 
 Then open your browser and type `localhost:3000`
 
@@ -66,11 +78,17 @@ until the data load.
 In the project directory, you can run:
 
 ### `docker:crate`
+
 Spins up the crate's docker image in the background. If you don't have the image on your system it will download first then run it.
 Downloading image may take same time.
 
 ### `docker:import`
+
 imports the sample data into crate db's cluster.
+
+### `yarn start-proxy`
+
+Starts proxy node server for crate's local cluster. 
 
 ### `yarn start`
 
