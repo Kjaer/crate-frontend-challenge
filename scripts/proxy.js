@@ -1,3 +1,7 @@
+// SOURCE: https://gist.github.com/beradrian/e3cf8c7ec83cca45c89556404445bde5
+// COURTESY OF Adrian Ber(https://gist.github.com/beradrian)
+
+
 /** If you want to use the local development environment with the dev backend,
  * this will create a proxy so you won't run into CORS issues.
  * It accepts the following command line parameters:
