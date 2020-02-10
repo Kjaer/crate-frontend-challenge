@@ -5,8 +5,11 @@
   "scripts": {
     "docker:crate": "docker run -p 4200:4200 -d crate",
     "docker:import": "node scripts/import.js",
+    "start-proxy": "node scripts/proxy.js -p 4201 -t http://localhost:4200",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
   },
   "dependencies": {
     "chota": "^0.7.1",
@@ -18,6 +21,11 @@
     "react-scripts": "3.3.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.1.0",
+    "command-line-args": "^5.1.1",
+    "jest-fetch-mock": "^3.0.1",
     "node-crate": "^2.0.6"
   },
   "eslintConfig": {

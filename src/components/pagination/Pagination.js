@@ -21,13 +21,14 @@ function Pagination({data, pageHandler}) {
   }
 
   return(
-    <nav className='tabs'>
+    <nav className='tabs' data-test="crate-pagination">
       {[...Array(total).keys()].map((pageNumber) => (
           <a
             key={pageNumber}
             href="#!"
             onClick={e => changePage(pageNumber)}
             className={(pageNumber === selectedPage ?  'active': '')}
+            data-test="crate-pagination-link"
           >
             {pageNumber + 1}
           </a>

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withQuery pass fetched data to the wrapped component 1`] = `
+<div>
+  <section
+    class="text-center"
+    data-test="crate-fetch-loading"
+  >
+    <h4>
+      LOADING ... 
+    </h4>
+    <img
+      alt="data is loading from remote..."
+      src="hourglass.gif"
+    />
+  </section>
+</div>
+`;
+
+exports[`withQuery pass fetched data to the wrapped component 2`] = `
+<div>
+  <p
+    data-test="crate-dummy"
+  >
+    dummy content
+  </p>
+</div>
+`;

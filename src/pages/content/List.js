@@ -5,8 +5,8 @@ import './List.css';
 
 function List({data, tableName}) {
   return(
-    <section>
-      <h3 className="table-name">{tableName} </h3>
+    <section data-test="crate-db-table">
+      <h3 className="table-name" data-test="crate-db-table-name">{tableName} </h3>
       <div className="table-container">
         <table className="striped">
           <thead>
@@ -30,7 +30,7 @@ function List({data, tableName}) {
                       if(Array.isArray(row)) {
                         return (
                           <td key={idx2}>
-                            {row.map(link => <a href={link} className="data-link" target="_blank" rel="noopener noreferrer">{link}</a>)}
+                            {row.map((link, idx3) => <a key={idx3} href={link} className="data-link" target="_blank" rel="noopener noreferrer" data-test="crate-db-row-link">{link}</a>)}
                           </td>
                         )
                       }
